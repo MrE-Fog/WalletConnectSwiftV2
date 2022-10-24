@@ -118,12 +118,10 @@ public class PairingClient: PairingRegisterer, PairingInteracting {
         return pairingRequestsSubscriber.subscribeForRequest(method)
     }
 
-#if DEBUG
     /// Delete all stored data such as: pairings, keys
     ///
     /// - Note: Doesn't unsubscribe from topics
     public func cleanup() throws {
         try cleanupService.cleanup()
     }
-#endif
 }
